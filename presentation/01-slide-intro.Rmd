@@ -291,11 +291,15 @@ class: center, middle
 # Thanks for your attention,  
 # let's connect!  
 
+.pull-right[.left[
 .Large[
 `r icon::fa("twitter", size=1)` [@leoNitrogen](https://twitter.com/leoNitrogen) 
 
 `r icon::fa("linkedin", size=1)` [Leonardo M. Bastos](https://www.linkedin.com/in/leonardo-m-bastos-b4b35510b/)  
 
 `r icon::fa("rss", size=1)` [agRonomy](https://agronomy.netlify.app)
- 
-]
+
+`r icon::fa("github", size=1)` [@leombastos](https://github.com/leombastos)
+
+]]]
+
