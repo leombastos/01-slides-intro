@@ -1,5 +1,5 @@
 ---
-title: "actualpresentation"
+title: "01-intro"
 output: 
   xaringan::moon_reader:
     seal: false
@@ -54,22 +54,56 @@ xaringanExtra::use_clipboard()
 
 
 ```
+
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "leombastos/01-slides-intro") %>% 
+  meta_social(
+    title = "Creating presentations with xaringan",
+    description = paste(
+      "Exploring the xaringan package for sharp presentation slides",
+      "Nov. 2020."
+    ),
+    url = "https://agronomy.netlify.app/slides/01-slide-intro/presentation/01-slide-intro.html#1",
+    #image = "https://build-your-own-universe.netlify.app/social-card.png",
+    image_alt = paste(
+      "Title slide of Build your own universe:", 
+      "Scale high-quality research data provisioning with R packages,", 
+      "presented at R/Medicine 2020 by Travis Gerke and Garrick Aden-Buie"
+    ),
+    og_type = "website",
+    og_author = "Leo Bastos",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@leoNitrogen"
+  )
+```
 layout: true
 background-image: url("ciampittilab.png")
 background-size: 120px
 background-position: 97% 2%
 
 ---
-
+background-image: url(wheat.jpg)
+background-size: cover
 class: center, middle
 
-# Creating presentations with *xaringan*  
-## Leonardo M. Bastos  
-.Large[`r ji("satellite")` `r ji("seedling")` `r ji("corn")`]  
+.top[# .white[Creating presentations with *xaringan*]]  
+.top[### .white[Leonardo M. Bastos | Nov. 10th 2020]]  
 
-.pull-right[
-Nov. 10th 2020  
-]
+
+.pull-left[.Large[.black[.right[
+[.white[@leoNitrogen]](https://twitter.com/leoNitrogen) `r icon::fa("twitter", size=1)`
+
+[.white[Leonardo M. Bastos]](https://www.linkedin.com/in/leonardo-m-bastos-b4b35510b/) `r icon::fa("linkedin", size=1)`
+]]]]
+
+.pull-right[.Large[.black[.left[
+`r icon::fa("rss", size=1)` [.white[agRonomy]](https://agronomy.netlify.app)
+
+`r icon::fa("github", size=1)` [.white[@leombastos]](https://github.com/leombastos)
+
+]]]]
 
 ---
 # Some resources
