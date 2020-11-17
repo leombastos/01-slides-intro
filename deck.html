@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>01-intro</title>
+    <meta charset="utf-8" />
+    <link href="deck_files/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="deck_files/tile-view-0.2.4/tile-view.css" rel="stylesheet" />
+    <script src="deck_files/tile-view-0.2.4/tile-view.js"></script>
+    <script src="deck_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="deck_files/xaringanExtra-clipboard-0.2.4/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="deck_files/xaringanExtra-clipboard-0.2.4/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="deck_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="deck_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="deck_files/xaringanExtra-shareagain-0.2.4/shareagain.css" rel="stylesheet" />
+    <script src="deck_files/xaringanExtra-shareagain-0.2.4/shareagain.js"></script>
+    <meta name="github-repo" content="leombastos/01-slides-intro"/>
+    <meta name="twitter:title" content="Creating presentations with xaringan"/>
+    <meta name="twitter:description" content="Exploring the xaringan package for sharp presentation slides Nov. 2020."/>
+    <meta name="twitter:url" content="https://agronomy.netlify.app/slides/01-slide-intro/presentation/01-slide-intro.html#1"/>
+    <meta name="twitter:image:alt" content="Title slide of Build your own universe: Scale high-quality research data provisioning with R packages, presented at R/Medicine 2020 by Travis Gerke and Garrick Aden-Buie"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@leoNitrogen"/>
+    <meta name="twitter:site" content="@leoNitrogen"/>
+    <meta property="og:title" content="Creating presentations with xaringan"/>
+    <meta property="og:description" content="Exploring the xaringan package for sharp presentation slides Nov. 2020."/>
+    <meta property="og:url" content="https://agronomy.netlify.app/slides/01-slide-intro/presentation/01-slide-intro.html#1"/>
+    <meta property="og:image:alt" content="Title slide of Build your own universe: Scale high-quality research data provisioning with R packages, presented at R/Medicine 2020 by Travis Gerke and Garrick Aden-Buie"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="Leo Bastos"/>
+    <link href="deck_files/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+    <script src="deck_files/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+    <script src="deck_files/jquery-1.12.4/jquery.min.js"></script>
+    <link href="deck_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="deck_files/datatables-binding-0.15/datatables.js"></script>
+    <link href="deck_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="deck_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="deck_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="deck_files/jszip-1.10.20/jszip.min.js"></script>
+    <link href="deck_files/dt-ext-buttons-1.10.20/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <script src="deck_files/dt-ext-buttons-1.10.20/js/dataTables.buttons.min.js"></script>
+    <script src="deck_files/dt-ext-buttons-1.10.20/js/buttons.flash.min.js"></script>
+    <script src="deck_files/dt-ext-buttons-1.10.20/js/buttons.html5.min.js"></script>
+    <script src="deck_files/dt-ext-buttons-1.10.20/js/buttons.colVis.min.js"></script>
+    <script src="deck_files/dt-ext-buttons-1.10.20/js/buttons.print.min.js"></script>
+    <link href="deck_files/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="deck_files/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+    <link href="deck_files/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="deck_files/leaflet-1.3.1/leaflet.js"></script>
+    <link href="deck_files/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="deck_files/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="deck_files/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="deck_files/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="deck_files/leaflet-binding-2.0.3/leaflet.js"></script>
+    <link href="deck_files/countdown-0.3.5/countdown.css" rel="stylesheet" />
+    <script src="deck_files/countdown-0.3.5/countdown.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+layout: true
+background-image: url("ciampittilab.png")
+background-size: 120px
+background-position: 97% 2%
+
+---
+background-image: url(wheat.jpg)
+background-size: cover
+class: center, middle
+
+.top[# .white[Creating presentations with *xaringan*]]  
+.top[### .white[Leonardo M. Bastos | Nov. 10th 2020]]  
+
+
+.pull-left[.Large[.black[.right[
+[.white[@leoNitrogen]](https://twitter.com/leoNitrogen) <i class="fab  fa-twitter "></i>
+
+[.white[Leonardo M. Bastos]](https://www.linkedin.com/in/leonardo-m-bastos-b4b35510b/) <i class="fab  fa-linkedin "></i>
+]]]]
+
+.pull-right[.Large[.black[.left[
+<i class="fas  fa-rss "></i> [.white[agRonomy]](https://agronomy.netlify.app)
+
+<i class="fab  fa-github "></i> [.white[@leombastos]](https://github.com/leombastos)
+
+]]]]
+
+---
+# Some resources
+
+.pull-left[
+#### *links* for great xaringan slides 😃  
+
+- [Garth Tarr presentation](https://garthtarr.github.io/sydney_xaringan/#1)  
+
+- [Alisson Hill presentation](https://arm.rbind.io/slides/xaringan.html#1)
+
+- [Yihui Xie presentation](https://slides.yihui.org/xaringan/#1)
+
+- [Anna Krystalli presentation](https://annakrystalli.me/talks/xaringan/xaringan.html#1)
+
+- [CSS intro](https://www.w3schools.com/css/default.asp)
+
+]
+
+.pull-right[
+#### *links* for emoji and icon names 😄  
+- [Emoji name library](https://emoji.muan.co)  
+
+- [Font Awesome icon name library](https://fontawesome.com/icons?d=gallery)
+
+- [Academicicons icon name library](http://jpswalsh.github.io/academicons/) ]
+
+---
+# Learning check-list  
+
+.pull-left[
+- ~~How to avoid tables/figures running down~~  
+
+- ~~How to remove the code previous to the flipbook~~  
+
+- ~~How to add emojis!~~
+
+- ~~How to add multiple icons~~  
+
+- ~~How to change font size and color~~
+
+]
+
+.pull-right[
+- ~~How to change alignment and spacing~~  
+
+- ~~How to publish it (netlify)~~
+]
+
+
+---
+
+class: left, top, Large
+
+
+
+# Some hypothetical background  
+Here are some important things to know about this topic:
+--
+.pull-left[
+.center[Nitrogen cycle:]
+![](http://umich.edu/~lehnert/picts/N-cycle.jpg)&lt;!-- --&gt;
+]
+
+--
+
+.pull-right[
+Some highlights about The N cycle are:
+
+- Plants absorb both `\(NO_{3}^-\)` and `\(NH_{4}\)`
+
+- `\(NO_{3}^-\)` is more prone to losses, including  
+
+- Denitrification  
+
+- Leaching  
+
+]  
+
+
+???
+
+there are just notes!  
+
+---
+
+# Interactive tables!  
+<div id="htmlwidget-acc6166c089b186f3a53" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-acc6166c089b186f3a53">{"x":{"filter":"none","extensions":["Buttons"],"data":[[11.23,13.21,8.39,10.32,11.81,9.92,12.04,9.31,10.89,9.57],[0.51,-1.36,0.04,0.82,-3.21,1.06,-1.16,3.1,0.5,-2.12],[11.74,11.86,8.44,11.14,8.6,10.98,10.87,12.41,11.39,7.45]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>x<\/th>\n      <th>e<\/th>\n      <th>y<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"tBp","buttons":["csv","excel"],"pageLength":4,"columnDefs":[{"targets":0,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 1, 3, \",\", \".\"); }"},{"targets":1,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 1, 3, \",\", \".\"); }"},{"targets":2,"render":"function(data, type, row, meta) { return DTWidget.formatRound(data, 1, 3, \",\", \".\"); }"},{"className":"dt-right","targets":[0,1,2]}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":["options.columnDefs.0.render","options.columnDefs.1.render","options.columnDefs.2.render"],"jsHooks":[]}</script>
+
+
+--
+
+.blockquote2[###<i class="fas  fa-comment-dots "></i> Tip
+You can download the data (as csv or excel), and browse the dataset!
+]
+
+---
+
+class: left, top  
+
+#Interactive map!
+.pull-left[
+
+```r
+leaflet() %&gt;% 
+  addTiles() %&gt;% 
+  setView(-93.65, 42.0285, 
+          zoom = 17)
+```
+  
+.large[.blockquote3[###<i class="fas  fa-comment-dots "></i> Tip
+Make sure to toggle and zoom on the map ➡️]
+]]
+
+.pull-right[
+<div id="htmlwidget-6247da33e474d2ca5426" style="width:504px;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6247da33e474d2ca5426">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+]
+
+
+---
+class: center, middle
+# Let's plot!  
+.pull-left[
+## a) with static code and plot side-by-side  
+]
+
+.pull-right[
+## b) with `flipbookr`  
+
+]
+---
+class: center, middle
+
+# a) static code and plot side-by-side   
+#<i class="fas  fa-file-code "></i> + <i class="fas  fa-chart-bar "></i>
+
+---
+class: left, middle
+.pull-left[
+
+```r
+mydf %&gt;%
+  ggplot(aes(x=x, y=y))+
+  geom_point()+
+  geom_abline()+
+  geom_smooth(method="lm")+
+  coord_fixed()
+```
+]
+
+.pull-right[
+![](deck_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+]
+
+---
+class: center, middle
+
+# b) with `flipbookr`    
+#<i class="fas  fa-file-code fa-spin "></i> + <i class="fas  fa-chart-bar fa-spin "></i>
+
+---
+
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+*mydf
+```
+]
+ 
+.panel2-plot1-auto[
+
+```
+# A tibble: 10 x 3
+       x     e     y
+   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 11.2   0.51 11.7 
+ 2 13.2  -1.36 11.9 
+ 3  8.39  0.04  8.44
+ 4 10.3   0.82 11.1 
+ 5 11.8  -3.21  8.6 
+ 6  9.92  1.06 11.0 
+ 7 12.0  -1.16 10.9 
+ 8  9.31  3.1  12.4 
+ 9 10.9   0.5  11.4 
+10  9.57 -2.12  7.45
+```
+]
+
+---
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+mydf %&gt;%
+* ggplot(aes(x=x, y=y))
+```
+]
+ 
+.panel2-plot1-auto[
+![](deck_files/figure-html/plot1_auto_02_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+mydf %&gt;%
+  ggplot(aes(x=x, y=y))+
+* geom_point()
+```
+]
+ 
+.panel2-plot1-auto[
+![](deck_files/figure-html/plot1_auto_03_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+mydf %&gt;%
+  ggplot(aes(x=x, y=y))+
+  geom_point()+
+* geom_abline()
+```
+]
+ 
+.panel2-plot1-auto[
+![](deck_files/figure-html/plot1_auto_04_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+mydf %&gt;%
+  ggplot(aes(x=x, y=y))+
+  geom_point()+
+  geom_abline()+
+* geom_smooth(method="lm")
+```
+]
+ 
+.panel2-plot1-auto[
+![](deck_files/figure-html/plot1_auto_05_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+mydf %&gt;%
+  ggplot(aes(x=x, y=y))+
+  geom_point()+
+  geom_abline()+
+  geom_smooth(method="lm")+
+* coord_fixed()
+```
+]
+ 
+.panel2-plot1-auto[
+![](deck_files/figure-html/plot1_auto_06_output-1.png)&lt;!-- --&gt;
+]
+
+---
+count: false
+ 
+with flipbookr
+.panel1-plot1-auto[
+
+```r
+mydf %&gt;%
+  ggplot(aes(x=x, y=y))+
+  geom_point()+
+  geom_abline()+
+  geom_smooth(method="lm")+
+  coord_fixed()
+```
+]
+ 
+.panel2-plot1-auto[
+![](deck_files/figure-html/plot1_auto_07_output-1.png)&lt;!-- --&gt;
+]
+
+&lt;style&gt;
+.panel1-plot1-auto {
+  color: black;
+  width: 38.6060606060606%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel2-plot1-auto {
+  color: black;
+  width: 59.3939393939394%;
+  hight: 32%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+.panel3-plot1-auto {
+  color: black;
+  width: NA%;
+  hight: 33%;
+  float: left;
+  padding-left: 1%;
+  font-size: 80%
+}
+&lt;/style&gt;
+
+  
+
+
+
+
+---
+class: left, top, Large
+
+# Including a timer for exercises!
+## Your turn!
+Now, use the codes provided on previous slides to create your own ggplots!  
+
+You'll have 5 minutes!
+
+--
+
+.pull-left[
+<div class="countdown" id="timer_5fb417a0" style="bottom:10;left:15;padding:0px;" data-audio="true" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>  
+]
+
+--
+
+.pull-right[
+.large[.blockquote2[###<i class="fas  fa-comment-dots "></i> Tip
+Go ahead and press on the timer to get it going!
+]]
+]
+
+---
+class: center, middle  
+
+# Thanks for your attention,  
+# let's connect!  
+
+.pull-right[.left[
+.Large[
+<i class="fab  fa-twitter "></i> [@leoNitrogen](https://twitter.com/leoNitrogen) 
+
+<i class="fab  fa-linkedin "></i> [Leonardo M. Bastos](https://www.linkedin.com/in/leonardo-m-bastos-b4b35510b/)  
+
+<i class="fas  fa-rss "></i> [agRonomy](https://agronomy.netlify.app)
+
+<i class="fab  fa-github "></i> [@leombastos](https://github.com/leombastos)
+
+]]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
