@@ -338,5 +338,3 @@ class: center, middle
 ]]]
 
 ---
-
-This is a test 
