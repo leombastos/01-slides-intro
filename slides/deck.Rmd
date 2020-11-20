@@ -336,5 +336,3 @@ class: center, middle
 `r icon::fa("github", size=1)` [@leombastos](https://github.com/leombastos)
 
 ]]]
-
----
